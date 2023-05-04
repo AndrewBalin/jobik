@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/splash',
+      initialRoute: '/',
       onGenerateRoute: (routeSettings) {
 
         var path = routeSettings.name?.split('/');

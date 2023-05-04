@@ -132,7 +132,6 @@ class Block extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-
         width: size.width,
         height: size.height,
         decoration: BoxDecoration(
