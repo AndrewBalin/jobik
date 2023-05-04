@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:jobik/authScreens/authScreen.dart';
 import 'package:jobik/homeScreens/mainScreen.dart';
 import 'homeScreens/mainScreen.dart';
 import 'startScreens/aboutScreen.dart';
 import 'startScreens/splashScreen.dart';
+import 'authScreens/authScreen.dart';
+import 'authScreens/authEmail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +15,9 @@ const Map<String, Widget> paths = {
   '/': MainScreen(),
   '/splash': SplashScreen(),
   '/welcome': AboutScreen(),
-  /*'/reg': RegScreen(),
-  '/auth': AuthScreen()*/
+  /*'/reg': RegScreen(),*/
+  '/auth': AuthScreen(),
+  '/email': AuthEmail()
 };
 
 class MyApp extends StatelessWidget {
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/splash',
+      initialRoute: '/auth',
       onGenerateRoute: (routeSettings) {
 
         var path = routeSettings.name?.split('/');
