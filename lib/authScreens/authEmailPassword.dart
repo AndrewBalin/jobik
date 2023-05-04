@@ -43,7 +43,9 @@ class AuthEmailPassword extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: size.height * 0.015, left: size.width * 0.114, right: size.width * 0.116),
               child: InkWell(
-                onTap: (){},
+                onTap: (){
+                  Navigator.pushNamed(context, '/about_me');
+                },
                 child: Image(
                     image: AssetImage('auth/img_onwards.png'),
                     width: size.width * 0.77,
