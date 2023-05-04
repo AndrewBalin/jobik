@@ -10,13 +10,13 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
+      width: size.width * 0.9,
       height: 346,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 100, 20, 166),
         borderRadius: BorderRadius.circular(45)
       ),
-      child: Column(
+      /*child: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 35, left: 35),
@@ -36,7 +36,7 @@ class MenuCard extends StatelessWidget {
             ),
           )
         ],
-      ),
+      ),*/
     );
   }
 }
