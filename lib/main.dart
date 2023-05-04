@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:jobik/authScreens/authEmailPassword.dart';
 import 'package:jobik/authScreens/authScreen.dart';
 import 'package:jobik/homeScreens/mainScreen.dart';
 import 'homeScreens/mainScreen.dart';
@@ -17,7 +18,8 @@ const Map<String, Widget> paths = {
   '/welcome': AboutScreen(),
   /*'/reg': RegScreen(),*/
   '/auth': AuthScreen(),
-  '/email': AuthEmail()
+  '/email': AuthEmail(),
+  '/email_password': AuthEmailPassword()
 };
 
 class MyApp extends StatelessWidget {
