@@ -71,7 +71,14 @@ class _AboutMeState extends State<AboutMe> {
                 ],
               ),
             ),
-
+            InkWell(
+              onTap: (){},
+              child: Image(
+                image: AssetImage('auth/img_onwards.png'),
+                  width: size.width * 0.77,
+                  height: size.height * 0.07
+                  )
+              ),
           ],
         ),
       ),
