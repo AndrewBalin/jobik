@@ -43,14 +43,21 @@ class _AboutScreenState extends State<AboutScreen> with
   }
 
   _nextPage() {
+      pageController.nextPage(
+          duration: const Duration(seconds: 2), curve: Curves.easeInOutQuad);
+      progressController.forward().whenComplete(() => _animateEnd());
+  }
+
+  _animateEnd() {
     setState(() {
+      _current += 0.2;
       animate = Tween(begin: _current, end: _current + 0.2).animate(
           CurvedAnimation(
               parent: progressController, curve: Curves.easeInOutQuad));
-      pageController.nextPage(
-          duration: const Duration(seconds: 2), curve: Curves.easeInOutQuad);
-      progressController.forward();
-      _current += 0.2;
+      progressController.reset();
+      if(_current == 1) {
+        Navigator.pushNamedAndRemoveUntil(context, '/', (Route<dynamic> route) => false);
+      }
     });
   }
 
@@ -59,7 +66,6 @@ class _AboutScreenState extends State<AboutScreen> with
     Size size = MediaQuery
         .of(context)
         .size;
-
 
     return Scaffold(
       body: Stack(
@@ -81,7 +87,7 @@ class _AboutScreenState extends State<AboutScreen> with
               )
           ),
           Positioned(
-              bottom: 100,
+              bottom: size.height * 0.15,
               width: size.width,
               child: Center(
                   child: SizedBox(
