@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widrets/card.dart';
+import 'widgets/card.dart';
 
 class MainScreen extends StatefulWidget {
 
