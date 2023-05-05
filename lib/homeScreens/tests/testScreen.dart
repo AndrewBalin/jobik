@@ -49,28 +49,7 @@ class _TestScreenState extends State<TestScreen> {
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
                       for(var i; i < test.length; i++) {
-                        Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(top: 20, bottom: 20),
-                              child: Text('$i. ${test[i].question}:',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(fontFamily: 'Nunito',
-                                      color: Color.fromARGB(255, 255, 48, 193),
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 27)),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(top: 25),
-                              child: Text('$i. ${test[i].question}:',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(fontFamily: 'Nunito',
-                                      color: Color.fromARGB(255, 255, 48, 193),
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 27)),
-                            ),
-                          ],
-                        ),
+
                       }
                     ],
                   ),
@@ -78,6 +57,40 @@ class _TestScreenState extends State<TestScreen> {
               ),
             )
         )
+    );
+  }
+}
+
+class Question extends StatelessWidget {
+
+  final Size size;
+  final Map data;
+  final int num;
+  const Question(this.size, this.data, this.num, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.only(top: 20, bottom: 20),
+          child: Text('$num. ${data[num].question}:',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontFamily: 'Nunito',
+                  color: Color.fromARGB(255, 255, 48, 193),
+                  fontWeight: FontWeight.w900,
+                  fontSize: 27)),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 25),
+          child: Text('$i. ${test[i].question}:',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontFamily: 'Nunito',
+                  color: Color.fromARGB(255, 255, 48, 193),
+                  fontWeight: FontWeight.w900,
+                  fontSize: 27)),
+        ),
+      ],
     );
   }
 }
