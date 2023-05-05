@@ -21,7 +21,6 @@ class _AboutScreenState extends State<AboutScreen> with
 
   List<String> texts = [
     'Узнай, что подходит\nименно тебе',
-    'Выполняй задания и\nтесты',
     'Осваивай профессии',
     'Получай навыки',
     'Отслеживай свои успехи'
