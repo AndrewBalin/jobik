@@ -29,6 +29,7 @@ class _MainScreenState extends State<MainScreen> {
                       child: Align(
                         alignment: Alignment.center,
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             Image(
                               image: AssetImage('logo.png'),
@@ -57,15 +58,18 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 35),
-                    child: MenuCard(size, 'Каталог профессий', 'home/1.png'),
+                    child: MenuCard(size, 'Каталог профессий', 'assets/home/1.png'),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 35),
-                    child: MenuCard(size, 'Задания и тесты', 'home/2.png'),
+                    child: InkWell(
+                      onTap: () { Navigator.pushNamed(context, '/tests'); },
+                      child: MenuCard(size, 'Задания и тесты', 'assets/home/2.png'),
+                    )
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 35, bottom: 80),
-                    child: MenuCard(size, 'Рекомендации', 'home/3.png'),
+                    child: MenuCard(size, 'Рекомендации', 'assets/home/3.png'),
                   )
                 ],
               ),

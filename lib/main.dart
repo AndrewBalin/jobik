@@ -6,6 +6,8 @@ import 'startScreens/aboutScreen.dart';
 import 'startScreens/splashScreen.dart';
 import 'authScreens/authScreen.dart';
 import 'authScreens/authEmail.dart';
+import 'homeScreens/tests/testsScreen.dart';
+import 'homeScreens/tests/testDescription.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,9 @@ const Map<String, Widget> paths = {
   '/welcome': AboutScreen(),
   /*'/reg': RegScreen(),*/
   '/auth': AuthScreen(),
-  '/email': AuthEmail()
+  '/email': AuthEmail(),
+  '/tests': TestsScreen(),
+  '/test': TestDescription()
 };
 
 class MyApp extends StatelessWidget {
@@ -30,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/auth',
+      initialRoute: '/test',
       onGenerateRoute: (routeSettings) {
 
         var path = routeSettings.name?.split('/');

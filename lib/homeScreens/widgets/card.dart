@@ -58,25 +58,25 @@ class TestCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(45)
       ),
       child: Row(
-
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 35, left: 35),
+            padding: const EdgeInsets.only(left: 23),
+            child: Center(
+              child: Image(
+                image: AssetImage(image),
+                height: 88,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 14),
             child: Text(text,
                 style: const TextStyle(fontFamily: 'Nunito',
                     color: Color.fromARGB(255, 217, 217, 217),
                     fontWeight: FontWeight.w900,
                     fontSize: 22)),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 14),
-            child: Center(
-              child: Image(
-                image: AssetImage(image),
-                height: 200,
-              ),
-            ),
-          )
         ],
       ),
     );
