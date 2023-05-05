@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: <Widget> [
               Padding(
                   padding: EdgeInsets.fromLTRB(0, size.height * 0.25, 0, 0),
-                  child: Image(image: const AssetImage('logo.png'), width: size.width * 0.65, alignment: Alignment.center,)
+                  child: Image(image: const AssetImage('assets/logo.png'), width: size.width * 0.65, alignment: Alignment.center,)
               ),
               const Padding(
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),

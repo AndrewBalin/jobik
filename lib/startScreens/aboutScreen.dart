@@ -21,7 +21,6 @@ class _AboutScreenState extends State<AboutScreen> with
 
   List<String> texts = [
     'Узнай, что подходит\nименно тебе',
-    'Выполняй задания и\nтесты',
     'Осваивай профессии',
     'Получай навыки',
     'Отслеживай свои успехи'
@@ -111,7 +110,7 @@ class _AboutScreenState extends State<AboutScreen> with
                           child: InkWell(
                             onTap: _nextPage,
                             child: const Image(image: AssetImage(
-                                'about/next.png'),
+                                'assets/about/next.png'),
                                 width: 75,
                                 height: 75),
                           ),
@@ -143,7 +142,7 @@ class Block extends StatelessWidget {
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 207, 149, 255),
           image: DecorationImage(
-              image: AssetImage('about/bg$id.png'),
+              image: AssetImage('assets/about/bg$id.png'),
               fit: BoxFit.cover),
         ),
         child: Column(
@@ -151,7 +150,7 @@ class Block extends StatelessWidget {
           [
             Padding(
                 padding: EdgeInsets.only(top: size.height*0.25),
-                child: Image(image: AssetImage('about/$id.png'), width: size.width*0.85),
+                child: Image(image: AssetImage('assets/about/$id.png'), width: size.width*0.85),
             ),
 
             Padding(
