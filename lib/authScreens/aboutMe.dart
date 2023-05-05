@@ -8,6 +8,8 @@ class AboutMe extends StatefulWidget {
 }
 
 class _AboutMeState extends State<AboutMe> {
+  List<String> items = ['<не выбрано>', 'путешествия', 'чтение', 'чтение', 'кулинария', 'рукоделие', 'занятия спортом', 'коллекционирование редкостей', 'выращивание растений и уход за домашними животными', 'литературное творчество'];
+  String? selectedItem = '<не выбрано>';
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -71,14 +73,33 @@ class _AboutMeState extends State<AboutMe> {
                 ],
               ),
             ),
-            InkWell(
-              onTap: (){},
-              child: Image(
-                image: AssetImage('auth/img_onwards.png'),
-                  width: size.width * 0.77,
-                  height: size.height * 0.07
-                  )
+            Padding(
+              padding: EdgeInsets.only(top: size.height * 0.01, left: size.width * 0.084, right: size.width * 0.084),
+              child: SizedBox(
+                width: size.width * 0.8,
+                child: DropdownButton<String>(
+                    value: selectedItem,
+                    items: items
+                      .map((item) => DropdownMenuItem<String>(
+                        value: item,
+                        child: Text(item)
+                    ))
+                    .toList(),
+                    onChanged: (item) => setState(() => selectedItem = item),
+                ),
               ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(),
+              child: InkWell(
+                onTap: (){},
+                child: Image(
+                  image: AssetImage('auth/img_onwards.png'),
+                    width: size.width * 0.77,
+                    height: size.height * 0.07
+                    )
+                ),
+            ),
           ],
         ),
       ),

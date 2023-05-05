@@ -20,8 +20,8 @@ const Map<String, Widget> paths = {
   /*'/reg': RegScreen(),*/
   '/auth': AuthScreen(),
   '/email': AuthEmail(),
-  '/email_password': AuthEmailPassword(),
-  '/about_me': AboutMe()
+  '/about_me': AboutMe(),
+  '/authP': AuthEmailPassword()
 };
 
 class MyApp extends StatelessWidget {

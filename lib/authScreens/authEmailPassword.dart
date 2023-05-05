@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AuthEmailPassword extends StatelessWidget {
-  const AuthEmailPassword({Key? key}) : super(key: key);
+class AuthEmailPassword extends StatefulWidget {
+  const AuthEmailPassword( {Key? key});
 
+  @override
+  State<AuthEmailPassword> createState() => _AuthEmailPasswordState();
+}
+
+class _AuthEmailPasswordState extends State<AuthEmailPassword> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -44,7 +49,7 @@ class AuthEmailPassword extends StatelessWidget {
               padding: EdgeInsets.only(top: size.height * 0.015, left: size.width * 0.114, right: size.width * 0.116),
               child: InkWell(
                 onTap: (){
-                  Navigator.pushNamed(context, '/about_me');
+                  Navigator.pushNamed(context, '/');
                 },
                 child: Image(
                     image: AssetImage('auth/img_onwards.png'),
